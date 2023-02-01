@@ -1,3 +1,9 @@
+.article {
+  border: 2px dashed black;
+  padding: 20px;
+  margin: 20px;
+}
+
 .buttonContainer {
   display: flex;
   flex-wrap: wrap;
@@ -7,4 +13,10 @@
   padding: 4px 100px;
   border-radius: 50%;
   background-color: pink;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
