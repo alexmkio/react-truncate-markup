@@ -20,3 +20,9 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+}

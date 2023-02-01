@@ -48,21 +48,22 @@ export default function Second() {
   };
 
   return (
-    <main>
-      <article className={styles.article}>
-        {shouldTruncate ? (
-          <TruncatedList />
-        ) : (
-          <section className={styles.buttonContainer}>
-            {items.map((item) => (
-              <Link href="/" className={styles.button} key={item}>
-                {item}
-              </Link>
-            ))}
-            <span onClick={toggleTruncate}>{"Show Less"}</span>
-          </section>
-        )}
-      </article>
-    </main>
+    <article className={styles.article}>
+      {shouldTruncate ? (
+        <TruncatedList />
+      ) : (
+        <section className={styles.buttonContainer}>
+          <Link href="/" className={styles.button}>
+            One off
+          </Link>
+          {items.map((item) => (
+            <Link href="/" className={styles.button} key={item}>
+              {item}
+            </Link>
+          ))}
+          <span onClick={toggleTruncate}>{"Show Less"}</span>
+        </section>
+      )}
+    </article>
   );
 }
