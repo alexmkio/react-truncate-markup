@@ -49,23 +49,27 @@ export default function Third() {
 
   return (
     <article className={styles.article}>
-      <section className={styles.flex}>
+      <section className={styles.flex1}>
         <div className={styles.box}></div>
-        {shouldTruncate ? (
-          <TruncatedList />
-        ) : (
-          <section className={styles.buttonContainer}>
-            <Link href="/" className={styles.button}>
-              One off
-            </Link>
-            {items.map((item) => (
-              <Link href="/" className={styles.button} key={item}>
-                {item}
+        <div className={styles.flex2}>
+          <p>Paragraph 1</p>
+          <p>Paragraph 2</p>
+          {shouldTruncate ? (
+            <TruncatedList />
+          ) : (
+            <section className={styles.buttonContainer}>
+              <Link href="/" className={styles.button}>
+                One off
               </Link>
-            ))}
-            <span onClick={toggleTruncate}>{"Show Less"}</span>
-          </section>
-        )}
+              {items.map((item) => (
+                <Link href="/" className={styles.button} key={item}>
+                  {item}
+                </Link>
+              ))}
+              <span onClick={toggleTruncate}>{"Show Less"}</span>
+            </section>
+          )}
+        </div>
       </section>
     </article>
   );
